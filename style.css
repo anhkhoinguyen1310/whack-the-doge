@@ -1,0 +1,108 @@
+body
+{
+    font-family: 'Helvetica';
+}
+
+.box
+{
+    border: 3px solid black;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*enter technique, make sure the box always be the center of the page*/
+    background-image: url('dogebg.png');
+    overflow: hidden;  /* make sure nothing stick out from the box*/ 
+    background-position: center; 
+}  
+
+.score
+{
+    font-size: 150px;
+    color: black;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+   
+}
+
+.countdown
+{
+     position: absolute;
+     top: 490px;
+     width: 100%;
+     font-size: 20px;
+     text-align: center ;
+     color: black;
+}
+button
+{
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+ .game-box
+ {
+       width: 600px;
+       height: 400px;
+       margin: 70px  auto;
+       z-index: 200;
+       display: flex;
+       flex-wrap: wrap;    
+ }
+.hole
+ {
+     flex-grow: 1;
+     flex-shrink: 0;
+     flex-basis: 33.33%;
+     position: relative;
+     overflow: hidden; /* make sure nothing stick out from the box*/ 
+ } 
+ .hole::after
+ {
+     content: '';
+     display: block;
+     background-image: url('sand1.png');
+     position: absolute;
+     width: 100%;
+     height: 70px;
+     z-index: 2;
+     bottom: -30px;
+     background-size: contain; 
+
+ }
+
+ .mole 
+{
+    background-image: url('doge11.png');
+    position: absolute;
+    top: 100%; 
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.mole.small 
+{
+    background-size: 50%; 
+}
+
+.mole.big 
+{
+    background-size: 70%; 
+}
+
+.hole.up .mole
+{
+    top: 0; 
+}
