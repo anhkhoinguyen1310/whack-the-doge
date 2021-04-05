@@ -2,9 +2,31 @@ body
 {
     font-family: 'Helvetica';
 }
-
+#sign-in-form
+{
+    text-align: center;
+}
+#sign-in-button 
+{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#sign-out-button
+{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#user-name-prompt
+{
+    text-align: center;
+}
 #sign-out-form {
     display: none;
+    text-align: center;
 }
 
 .box
@@ -32,7 +54,7 @@ body
    
 }
 
-.countdown
+#countdown
 {
      position: absolute;
      top: 490px;

@@ -1,7 +1,7 @@
 const holes = document.querySelectorAll('.hole');
 const scoreNo = document.getElementById("score");
 const moles = document.querySelectorAll('.mole'); 
-const countdownBoard = document.querySelectorAll('.countdown');
+const countdownBoard = document.getElementById("countdown");
 const startButtons = document.getElementById("startButton"); 
 
 
