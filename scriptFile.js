@@ -1,9 +1,9 @@
 const holes = document.querySelectorAll('.hole');
-
-const scoreNo =  document.querySelectorAll('.score');
+const scoreNo = document.getElementById("score");
 const moles = document.querySelectorAll('.mole'); 
 const countdownBoard = document.querySelectorAll('.countdown');
 const startButtons = document.getElementById("startButton"); 
+
 
 let lastHole; 
 let timeUp = false;   
@@ -40,7 +40,9 @@ function startGame()
 {
     countdown = timeLimit/1000; // dynamic in case wanna change later 
     scoreNo.textContent = 0; 
-    //scoreNo.style.display = 'block';
+    scoreNo.style.display = 'block';
+    document.getElementById("user-name-prompt").style.display = 'block'
+
     countdownBoard.textContent = countdown;
     timeUp = false; 
     scores = 0; 
@@ -49,7 +51,7 @@ function startGame()
         timeUp = true;
     }, timeLimit);
 
-
+    //.style.display = 'block'
     // every one sec run this function 
     let startCountdown = setInterval(function () {
         countdown -=1;
