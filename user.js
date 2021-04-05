@@ -16,8 +16,6 @@ document.getElementById("sign-in-button").addEventListener('click', signIn );
 
 
 
-
-
 function signOut () {
     const userName = document.getElementById('username').value;
     localStorage.removeItem("User", userName);
